@@ -5,13 +5,13 @@ Bullet is a tool to increase the penetration testing workflow faster and smarter
 --------
 # Cloning
 ```
-git clone https://github.com/Orangeman9590/Bullet
+$ git clone https://github.com/Orangeman9590/Bullet
 ```
 # Change Directory
 ```
-cd Bullet
+$ cd Bullet
 ```
 # Run program
 ```
-python3 bullet.py
+$ python3 bullet.py
 ```
