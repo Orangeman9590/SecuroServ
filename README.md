@@ -5,7 +5,7 @@ Bullet is a tool to increase the penetration testing workflow faster and smarter
 --------
 # Install requirements
 ```
-pip3 install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 # Cloning
 ```
