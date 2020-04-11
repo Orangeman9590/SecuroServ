@@ -197,21 +197,33 @@ while True:
                 print(colored("STARTING FAST SCAN...", 'red'))
                 time.sleep(1)
                 os.system('nmap -f ' + y)
+	        print('PRESS {ENTER} TO GO BACK')
+	        nm = input()
+		continue
             elif u == '2':
                 os.system('clear')
                 print(colored("STARTING AGGRESIVE SCAN...", 'red'))
                 time.sleep(1)
                 os.system('nmap -A ' + y)
+	        print('PRESS {ENTER} TO GO BACK')
+	        nm = input()
+		continue
             elif u == '3':
                 os.system('clear')
                 print(colored("STARTING SYN ACK SCAN", 'red'))
                 time.sleep(1)
                 os.system('nmap -Ss' + y)
+	        print('PRESS {ENTER} TO GO BACK')
+	        nm = input()
+		continue
             elif u == '4' :
                 os.system('clear')
                 print(colored("STARTING UDP SCAN", 'red'))
                 time.sleep(1)
                 os.system('nmap -sU' + y)
+	        print('PRESS {ENTER} TO GO BACK')
+	        nm = input()
+		continue
 
         elif t == '2':
 	    #SHODAN
