@@ -16,7 +16,7 @@ colours = [ 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
 
 
-
+   
 os.system('clear')
 # MAIN MENU
 while True:
@@ -32,13 +32,13 @@ while True:
     print(colored('\____/   \___/  \_____/\_____/\____/  \_/  ', colour))
     print(colored('----------| Coded by: Orangeman |----------', 'red'))
     print(colored('--------------| MAIN MENU |----------------', 'cyan'))
-    print(colored('{1} Enter AirDos (Wireless attacks)', 'red'))
-    print(colored('{2} Password Attacks', 'red'))
-    print(colored('{3} BeaverCrypt (AES-256 Bit Encryptor of files)', 'red'))
-    print(colored('{4} Information Gathering', 'red'))
-    print(colored("{5} Sniffing and Spoofing", 'red'))
-    print(colored('{6} Exploitation', 'red'))
-    print(colored("{99} Quit Script", 'red'))
+    print(colored('[1] Enter AirDos (Wireless attacks)', 'red'))
+    print(colored('[2] Password Attacks', 'red'))
+    print(colored('[3] BeaverCrypt (AES-256 Bit Encryptor of files)', 'red'))
+    print(colored('[4] Information Gathering', 'red'))
+    print(colored("[5] Sniffing and Spoofing", 'red'))
+    print(colored('[6] Exploitation', 'red'))
+    print(colored("[99] Quit Script", 'red'))
     print('')
 
     # MAIN INPUT
@@ -72,10 +72,10 @@ while True:
         print(colored('| |   | | | | / \__/ /\__/ /\  /\  /\ \_/ / |\ \| |/ /  ', 'cyan'))
         print(colored('\_|   \_| |_/ \____/\____/  \/  \/  \___/\_| \_|___/   ', 'cyan'))
         print(colored('--------------------------------------------------------', 'red'))
-        print(colored('{1} HashCat', 'red'))
-        print(colored('{2} Generate Random Password', 'red'))
-        print(colored('{3} Hydra', 'red'))
-        print(colored('{ENTER} Go Back', 'red'))
+        print(colored('[1] HashCat', 'red'))
+        print(colored('[2] Generate Random Password', 'red'))
+        print(colored('[3] Hydra', 'red'))
+        print(colored('[ENTER] Go Back', 'red'))
 
         # SECOND INPUT
         w = input('bullet> ')
@@ -164,13 +164,13 @@ while True:
         print(colored(" _| |_  | |\  | | |     \ \_/ /", 'cyan'))
         print(colored(" \___/  \_| \_/ \_|      \___/ ", 'cyan'))
         print(colored("<------------------------------->", 'cyan'))
-        print(colored("{1} Nmap", 'magenta'))
-        print(colored("{2} Shodan", 'magenta'))
-        print(colored("{3} Setoolkit", 'magenta'))
-        print(colored("{4} Autopsy", 'magenta'))
-        print(colored("{5} Validate E-mail", 'magenta'))
-        print(colored("{6} Netdiscover", 'magenta'))
-        print(colored("{ENTER} Go Back", 'magenta'))
+        print(colored("[1] Nmap", 'magenta'))
+        print(colored("[2] Shodan", 'magenta'))
+        print(colored("[3] Setoolkit", 'magenta'))
+        print(colored("[4] Autopsy", 'magenta'))
+        print(colored("[5] Validate E-mail", 'magenta'))
+        print(colored("[6] Netdiscover", 'magenta'))
+        print(colored("[ENTER] Go Back", 'magenta'))
 
         t = input("bullet> ")
         if t == '1':
@@ -185,11 +185,11 @@ while True:
             print(colored("| |\  || |  | || | | || |    ", 'cyan'))
             print(colored("\_| \_/\_|  |_/\_| |_/\_|    ", 'cyan'))
             print(colored("<----------------------------->", 'red'))
-            print(colored("{1} Fast Scan (-f)", 'red'))
-            print(colored("{2} Aggressive Scan (-A)", 'red'))
-            print(colored("{3} Syn ACK Scan (-Ss)", 'red'))
-            print(colored("{4} UDP Scan (-sU)", 'red'))
-            print(colored("{ENTER} Go Back", 'red'))
+            print(colored("[1] Fast Scan (-f)", 'red'))
+            print(colored("[2] Aggressive Scan (-A)", 'red'))
+            print(colored("[3] Syn ACK Scan (-Ss)", 'red'))
+            print(colored("[4] UDP Scan (-sU)", 'red'))
+            print(colored("[ENTER] Go Back", 'red'))
 
             u = input("bullet> ")
             if u == '1':
@@ -261,12 +261,12 @@ while True:
         print(colored("/\__/ / |\  |_| |_| |   | |     | (_>  < /\__/ / |   \ \_/ /\ \_/ / |    ", 'red'))
         print(colored("\____/\_| \_/\___/\_|   \_|      \___/\/ \____/\_|    \___/  \___/\_|     ", 'red'))
         print(colored("<------------------------------------------------------------------------->", 'cyan'))
-        print(colored("{1} ARPspoof", 'red'))
-        print(colored("{2} Setoolkit", 'red'))
-        print(colored("{3) ShellPhish", 'red'))
-        print(colored("{4} URLSnarf (Works in conjunction with ARPspoof)", 'red'))
-        print(colored("{5} Dsniff (Works in conjunction with ARPspoof)", 'red'))
-        print(colored("{ENTER} Go Back", 'red'))
+        print(colored("[1] ARPspoof", 'red'))
+        print(colored("[2] Setoolkit", 'red'))
+        print(colored("[3] ShellPhish", 'red'))
+        print(colored("[4] URLSnarf (Works in conjunction with ARPspoof)", 'red'))
+        print(colored("[5] Dsniff (Works in conjunction with ARPspoof)", 'red'))
+        print(colored("[ENTER] Go Back", 'red'))
         f = input('bullet> ')
         if f == '1':
 	    #ARPSPOOF
@@ -331,12 +331,12 @@ while True:
         print(colored("| |___/ /^\ \| |   | |___\ \_/ /_| |_  | | ", 'magenta'))
         print(colored("\____/\/   \/\_|   \_____/\___/ \___/  \_/  ", 'magenta'))
         print(colored("<-------------------------------------------->", 'cyan'))
-        print(colored("{1} Metasploit Framework", 'white'))
-        print(colored("{2} BEEF-XSS Framework", 'white'))
-        print(colored("{3} Shodan", 'white'))
-        print(colored("{4} Router Sploit", 'white'))
-        print(colored("{5} The Fat Rat(BackDoor Factory)", 'white'))
-        print(colored("{ENTER} Go Back", 'red'))
+        print(colored("[1] Metasploit Framework", 'white'))
+        print(colored("[2] BEEF-XSS Framework", 'white'))
+        print(colored("[3] Shodan", 'white'))
+        print(colored("[4] Router Sploit", 'white'))
+        print(colored("[5] The Fat Rat(BackDoor Factory)", 'white'))
+        print(colored("[ENTER] Go Back", 'red'))
         l = input("bullet>")
         if l == '1':
             os.system('clear')
