@@ -1,6 +1,6 @@
-#BULLETSCRIPT
-#CODED BY: Orangeman
-#USE AT YOUR OWN RISK
+# BULLETSCRIPT
+# CODED BY: Orangeman
+# USE AT YOUR OWN RISK
 
 import os
 import time
@@ -11,19 +11,16 @@ import string
 import random
 import re
 
-
-colours = [ 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
+colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
 
-
-   
 os.system('clear')
 # MAIN MENU
-while True:
+while True :
     os.system('clear')
     print(colored('         |   |              All-in one tool', colour))
     print(colored('         | | |          For Penetration Testing', colour))
-    print(colored('         | | |',colour))
+    print(colored('         | | |', colour))
     print(colored('______  _|_|_|_  _      _      _____ _____ ', colour))
     print(colored('| ___ \ |     | | |    | |    |  ___|_   _|', colour))
     print(colored('| |_/ / |     | | |    | |    | |__   | |  ', colour))
@@ -44,26 +41,25 @@ while True:
     # MAIN INPUT
     q = input('bullet> ')
 
-
     # AIRDOS
-    if q == '99':
+    if q == '99' :
         print('Thank You for using my script...')
         os.system('clear')
         quit()
 
-    if q == '1':
+    if q == '1' :
         os.system('clear')
         print(colored("DO YOU HAVE AIRDOS?[Y/N]", 'red'))
         k = input('bullet> ')
-        if k == 'Y':
+        if k == 'Y' :
             os.system('python3 airdos/dos.py')
-        elif k == 'N':
+        elif k == 'N' :
             os.system('clear')
             os.system('git clone https://github.com/Orangeman9590/airdos')
             os.system('python3 airdos/dos.py')
 
     # PASSWORD
-    elif q == '2':
+    elif q == '2' :
         os.system('clear')
         print(colored('______  ___    _____ _____  _    _  _________________  ', 'cyan'))
         print(colored('| ___ \/ _ \  /  ___/  ___|| |  | ||  _  | ___ \  _  \ ', 'cyan'))
@@ -81,9 +77,9 @@ while True:
         w = input('bullet> ')
 
         # HASHCAT
-        if w =='99':
+        if w == '99' :
             os.system('clear')
-        if w == '1':
+        if w == '1' :
             print(colored('ENTER HASH OF PASSWORD: ', 'cyan'))
             e = input('bullet> ')
             print("SELECT ATTACK MODE...")
@@ -112,8 +108,8 @@ while True:
                 os.system(
                     'hashcat -m 0 -a 5 -o cracked.txt --force ' + e + ' /root/wordlists/rockyou.txt -r /usr/share/hashcat/rules/combinator.rule')
 
-        elif w == '2':
-	    # RANDOM PASSWORD
+        elif w == '2' :
+            # RANDOM PASSWORD
             os.system('clear')
             rando = string.ascii_letters + string.digits + string.punctuation
             pwd = secrets.choice(string.ascii_lowercase)
@@ -135,27 +131,27 @@ while True:
             print(" ")
             print(colored('PRESS {99} TO GO BACK'))
             input = input('bullet> ')
-            if input == '99':
+            if input == '99' :
                 continue
-        elif w == '3':
-            #HYDRA
+        elif w == '3' :
+            # HYDRA
             os.system('hydra --help')
             time.sleep(1)
-    elif q == '3':
-	#BEAVERCRYPT
+    elif q == '3' :
+        # BEAVERCRYPT
         os.system('clear')
         print('DO YOU HAVE BEAVERCRYPT?[Y/N]')
         bee = input('bullet> ')
-        if bee == 'Y':
+        if bee == 'Y' :
             os.system('clear')
             os.system('python3 /BeaverCrypt/beaver.py')
-        elif bee == 'N':
+        elif bee == 'N' :
             os.system('clear')
             os.system('git clone https://github.com/Orangeman9590/BeaverCrypt')
             os.system('python3 BeaverCrypt/beaver.py')
-            
-    elif q == '4':
-	#INFO
+
+    elif q == '4' :
+        # INFO
         os.system('clear')
         print(colored(" _____   _   _  ______   _____ ", 'cyan'))
         print(colored("|_   _| | \ | | |  ___| |  _  |", 'cyan'))
@@ -173,8 +169,8 @@ while True:
         print(colored("[ENTER] Go Back", 'magenta'))
 
         t = input("bullet> ")
-        if t == '1':
-	    #NMAP
+        if t == '1' :
+            # NMAP
             os.system('clear')
             print(colored("ENTER THE IP YOU WANT TO SCAN: ", 'red'))
             y = input("bullet> ")
@@ -192,47 +188,67 @@ while True:
             print(colored("[ENTER] Go Back", 'red'))
 
             u = input("bullet> ")
-            if u == '1':
+            if u == '1' :
                 os.system('clear')
                 print(colored("STARTING FAST SCAN...", 'red'))
                 time.sleep(1)
                 os.system('nmap -v -f ' + y)
-            elif u == '2':
+                print('PRESS [ENTER] TO GO BACK')
+                ba = input()
+                if ba == '99':
+                    continue
+            elif u == '2' :
                 os.system('clear')
                 print(colored("STARTING AGGRESIVE SCAN...", 'red'))
                 time.sleep(1)
                 os.system('nmap -v -A ' + y)
-            elif u == '3':
+                print('PRESS [ENTER] TO GO BACK')
+                bac = input()
+                if bac == '99':
+                    continue
+            elif u == '3' :
                 os.system('clear')
                 print(colored("STARTING SYN ACK SCAN", 'red'))
                 time.sleep(1)
                 os.system('nmap -v -Ss' + y)
+                print('PRESS [ENTER] TO GO BACK')
+                back = input()
+                if back == '99':
+                    continue
             elif u == '4' :
                 os.system('clear')
                 print(colored("STARTING UDP SCAN", 'red'))
                 time.sleep(1)
                 os.system('nmap -v -sU' + y)
+                print('PRESS [ENTER] TO GO BACK')
+                backs = input()
+                if backs == '99':
+                    continue
 
-        elif t == '2':
-	    #SHODAN
+        elif t == '2' :
+            # SHODAN
             os.system('clear')
             print(colored("STARTING SHODAN IN WEB BROWSER", 'red'))
             time.sleep(2)
             os.system('firefox shodan.io')
-        elif t == '3':
-	    #SETOOLKIT
+        elif t == '3' :
+            # SETOOLKIT
             os.system('clear')
             os.system('sudo setoolkit')
-        elif t == '4':
+        elif t == '4' :
             os.system('clear')
             os.system('autopsy')
-        elif t == '5':
+        elif t == '5' :
             regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
-            def check(email):
-                if(re.search(regex,email)):
+
+
+            def check(email) :
+                if (re.search(regex, email)) :
                     print("Valid Email")
-                else:
+                else :
                     print("Invalid Email")
+
+
             os.system('clear')
             print(colored("ENTER EMAIL YOU WANT TO CHECK", 'red'))
             print('')
@@ -243,7 +259,7 @@ while True:
             nine = input('bullet> ')
             if nine == '99' :
                 continue
-        elif t == '6':
+        elif t == '6' :
             os.system('clear')
             os.system('netdiscover')
 
@@ -251,8 +267,8 @@ while True:
 
 
 
-    elif q == '5':
-	#SNIFF&SPOOF
+    elif q == '5' :
+        # SNIFF&SPOOF
         os.system('clear')
         print(colored(" _____ _   _ _________________            ___________ _____  ___________  ", 'red'))
         print(colored("/  ___| \ | |_   _|  ___|  ___|   ___    /  ___| ___ \  _  ||  _  |  ___| ", 'red'))
@@ -268,8 +284,8 @@ while True:
         print(colored("[5] Dsniff (Works in conjunction with ARPspoof)", 'red'))
         print(colored("[ENTER] Go Back", 'red'))
         f = input('bullet> ')
-        if f == '1':
-	    #ARPSPOOF
+        if f == '1' :
+            # ARPSPOOF
             os.system('clear')
             print(colored('ENTER CLIENTS IP: ', 'red'))
             g = input('bullet> ')
@@ -288,28 +304,28 @@ while True:
             os.system('gnome-terminal --command="arpspoof -i "' + j + '" -t "' + h + "' '" + g)
             os.system('clear')
             continue
-        elif f == '2':
+        elif f == '2' :
             os.system('clear')
             os.system('sudo setoolkit')
-        elif f == '3':
-            #SHELLPHISH
+        elif f == '3' :
+            # SHELLPHISH
             os.system("clear")
             print(colored("DO YOU HAVE SHELLPHISH?[Y/N]", 'red'))
             v = input('bullet> ')
-            if v == 'Y':
+            if v == 'Y' :
                 os.system('clear')
                 os.system('./shellphish/shellphish.sh')
-            elif v == 'N':
+            elif v == 'N' :
                 print(colored("DO YOU WANT TO INSTALL IT[Y/N]", 'red'))
                 m = input('bullet> ')
-                if m == 'Y':
+                if m == 'Y' :
                     os.system('clear')
                     os.system('git clone https://github.com/thelinuxchoice/shellphish')
                     os.system('./shellphish/shellphish.sh')
-                if m == 'N':
+                if m == 'N' :
                     print("THEN WHY DID YOU COME HERE lol")
                     continue
-        elif f == '4':
+        elif f == '4' :
             os.system('clear')
             os.system('ifconfig')
             print(colored("|------------------------------------------------|", 'red'))
@@ -317,12 +333,12 @@ while True:
             z = input('bullet> ')
             os.system('clear')
             os.system('urlsnarf ' + z)
-        elif f == '5':
+        elif f == '5' :
             os.system('clear')
             os.system('dsniff')
 
 
-    elif q == '6':
+    elif q == '6' :
         os.system('clear')
         print(colored(" _______   ________ _     _____ _____ _____ ", 'magenta'))
         print(colored("|  ___\ \ / /| ___ \ |   |  _  |_   _|_   _|", 'magenta'))
@@ -338,54 +354,54 @@ while True:
         print(colored("[5] The Fat Rat(BackDoor Factory)", 'white'))
         print(colored("[ENTER] Go Back", 'red'))
         l = input("bullet>")
-        if l == '1':
+        if l == '1' :
             os.system('clear')
             os.system('sudo service postgresql start')
             os.system('msfconsole')
-        elif l == '2':
+        elif l == '2' :
             os.system('clear')
             os.system('sudo beef-xss')
-        elif l == '3':
+        elif l == '3' :
             os.system('clear')
             os.system('firefox shodan.io')
-        elif l == '4':
+        elif l == '4' :
             os.system("clear")
             print('DO YOU HAVE ROUTERSPLOIT?[Y/N]')
             x = input('bullet> ')
-            if x == 'Y':
+            if x == 'Y' :
                 os.system('clear')
                 os.system('python3 routersploit/rsf.py')
-            elif x == 'N':
+            elif x == 'N' :
                 os.system('clear')
                 os.system('git clone https://github.com/threat9/routersploit')
                 os.system('python3 routersploit/rsf.py')
-        elif l == '5':
+        elif l == '5' :
             os.system('clear')
             print('DO YOU HAVE THE FAT RAT?[Y/N]')
             a = input('bullet> ')
-            if a == 'Y':
+            if a == 'Y' :
                 os.system('clear')
                 os.system('./TheFatRat/fatrat')
-            elif a == 'N':
+            elif a == 'N' :
                 os.system('clear')
                 os.system('git clone https://github.com/Screetsec/TheFatRat')
                 os.system('./TheFatRat/fatrat')
             x = input('bullet> ')
-            if x == 'Y':
+            if x == 'Y' :
                 os.system('clear')
                 os.system('python3 routersploit/rsf.py')
-            elif x == 'N':
+            elif x == 'N' :
                 os.system('clear')
                 os.system('git clone https://github.com/threat9/routersploit')
                 os.system('python3 routersploit/rsf.py')
-        elif l == '5':
+        elif l == '5' :
             os.system('clear')
             print('DO YOU HAVE THE FAT RAT?[Y/N]')
             a = input('bullet> ')
-            if a == 'Y':
+            if a == 'Y' :
                 os.system('clear')
                 os.system('./TheFatRat/fatrat')
-            elif a == 'N':
+            elif a == 'N' :
                 os.system('clear')
                 os.system('git clone https://github.com/Screetsec/TheFatRat')
                 os.system('./TheFatRat/fatrat')
