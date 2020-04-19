@@ -231,7 +231,7 @@ while True :
             os.system('clear')
             print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
             SHODAN_API_KEY = input('bullet> ')
-            api = shoda.Shodan(SHODAN_API_KEY)
+            api = shodan.Shodan(SHODAN_API_KEY)
             os.system('clear')
             print(colored('WHAT DO YOU WANT TO SEARCH ON SHODAN'))
             search = input('bullet> ')
