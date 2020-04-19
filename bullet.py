@@ -10,6 +10,7 @@ import secrets
 import string
 import random
 import re
+import shodan
 
 colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
@@ -228,9 +229,22 @@ while True :
         elif t == '2' :
             # SHODAN
             os.system('clear')
-            print(colored("STARTING SHODAN IN WEB BROWSER", 'red'))
-            time.sleep(2)
-            os.system('firefox shodan.io')
+            print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
+            SHODAN_API_KEY = input('bullet> ')
+            api = shoda.Shodan(SHODAN_API_KEY)
+            os.system('clear')
+            print(colored('WHAT DO YOU WANT TO SEARCH ON SHODAN'))
+            search = input('bullet> ')
+            try:
+                results = api.search(search)
+                print(colored('RESULTS FOUND: %s' % results +['total'], 'cyan'))
+                for result in results['matches']:
+                    print('IP: %s' % result['ip_str'])
+                    print(result['data'])
+                    print('')
+            except shodan.APIError:
+                print('ERROR')
+
         elif t == '3' :
             # SETOOLKIT
             os.system('clear')
