@@ -14,7 +14,7 @@ import shodan
 
 colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
-shodan = '''
+sho = '''
  _____ _   _ ___________  ___   _   _ 
 /  ___| | | |  _  |  _  \/ _ \ | \ | |
 \ `--.| |_| | | | | | | / /_\ \|  \| |
@@ -239,7 +239,7 @@ while True :
         elif t == '2' :
             # SHODAN
             os.system('clear')
-            print(colored(shodan, 'magenta'))
+            print(colored(sho, 'magenta'))
             print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
             SHODAN_API_KEY = input('bullet> ')
             api = shodan.Shodan(SHODAN_API_KEY)
