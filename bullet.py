@@ -29,8 +29,8 @@ os.system('clear')
 # MAIN MENU
 while True :
     os.system('clear')
-    print(colored('         █║    █║        All-in one tool', colour))
-    print(colored('         █║ █║ █║    For Penetration Testing', colour))
+    print(colored('         █╗    █╗        All-in one tool', colour))
+    print(colored('         █║ █╗ █║    For Penetration Testing', colour))
     print(colored('         █║ █║ █║ ', colour))
     print(colored('██████╗ ████████╗██╗     ██╗     ███████╗████████╗', colour))
     print(colored('██╔══██╗██║   ██║██║     ██║     ██╔════╝╚══██╔══╝', colour))
