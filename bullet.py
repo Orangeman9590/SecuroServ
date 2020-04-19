@@ -14,6 +14,16 @@ import shodan
 
 colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
+shodan = '''
+ _____ _   _ ___________  ___   _   _ 
+/  ___| | | |  _  |  _  \/ _ \ | \ | |
+\ `--.| |_| | | | | | | / /_\ \|  \| |
+ `--. \  _  | | | | | | |  _  || . ` |
+/\__/ / | | \ \_/ / |/ /| | | || |\  |
+\____/\_| |_/\___/|___/ \_| |_/\_| \_/
+'''
+
+
 
 os.system('clear')
 # MAIN MENU
@@ -229,19 +239,22 @@ while True :
         elif t == '2' :
             # SHODAN
             os.system('clear')
+            print(colored(shodan, 'magenta'))
             print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
             SHODAN_API_KEY = input('bullet> ')
             api = shodan.Shodan(SHODAN_API_KEY)
             os.system('clear')
-            print(colored('WHAT DO YOU WANT TO SEARCH ON SHODAN'))
+            print(colored('WHAT DO YOU WANT TO SEARCH ON SHODAN', 'red'))
             search = input('bullet> ')
             try:
                 results = api.search(search)
-                print(colored('RESULTS FOUND: %s' % results +['total'], 'cyan'))
+                print(colored('RESULTS FOUND: %s' % results['total'], 'cyan'))
                 for result in results['matches']:
                     print('IP: %s' % result['ip_str'])
                     print(result['data'])
                     print('')
+                print('PRESS {ENTER} TO GO BACK')
+                back = input('bullet> ')
             except shodan.APIError:
                 print('ERROR')
 
