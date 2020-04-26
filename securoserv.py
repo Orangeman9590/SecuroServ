@@ -52,7 +52,7 @@ while True :
     print('')
 
     # MAIN INPUT
-    q = input('bullet> ')
+    q = input('securoserv> ')
 
     # AIRDOS
     if q == '99' :
@@ -63,7 +63,7 @@ while True :
     if q == '1' :
         os.system('clear')
         print(colored("DO YOU HAVE SIGHTSEER?[Y/N]", 'red'))
-        k = input('bullet> ')
+        k = input('securoserv> ')
         if k == 'Y' :
             os.system('python3 Sightseer/sightseer.py')
         elif k == 'N' :
@@ -87,14 +87,14 @@ while True :
         print(colored('[ENTER] Go Back', 'red'))
 
         # SECOND INPUT
-        w = input('bullet> ')
+        w = input('securoserv> ')
 
         # HASHCAT
         if w == '99' :
             os.system('clear')
         if w == '1' :
             print(colored('ENTER HASH OF PASSWORD: ', 'cyan'))
-            e = input('bullet> ')
+            e = input('securoserv> ')
             print("SELECT ATTACK MODE...")
             print("0 = Straight")
             print("1 = Combination")
@@ -154,7 +154,7 @@ while True :
         # BEAVERCRYPT
         os.system('clear')
         print('DO YOU HAVE BEAVERCRYPT?[Y/N]')
-        bee = input('bullet> ')
+        bee = input('securoserv> ')
         if bee == 'Y' :
             os.system('clear')
             os.system('python3 /BeaverCrypt/beaver.py')
@@ -181,12 +181,12 @@ while True :
         print(colored("[6] Netdiscover", 'magenta'))
         print(colored("[ENTER] Go Back", 'magenta'))
 
-        t = input("bullet> ")
+        t = input("securoserv> ")
         if t == '1' :
             # NMAP
             os.system('clear')
             print(colored("ENTER THE IP YOU WANT TO SCAN: ", 'red'))
-            y = input("bullet> ")
+            y = input("securoserv> ")
             print(colored(" _   _ ___  ___  ___  ______ ", 'cyan'))
             print(colored("| \ | ||  \/  | / _ \ | ___ \ ", 'cyan'))
             print(colored("|  \| || .  . |/ /_\ \| |_/ /", 'cyan'))
@@ -200,7 +200,7 @@ while True :
             print(colored("[4] UDP Scan (-sU)", 'red'))
             print(colored("[ENTER] Go Back", 'red'))
 
-            u = input("bullet> ")
+            u = input("securoserv> ")
             if u == '1' :
                 os.system('clear')
                 print(colored("STARTING FAST SCAN...", 'red'))
@@ -243,11 +243,11 @@ while True :
             os.system('clear')
             print(colored(shoda, 'magenta'))
             print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
-            SHODAN_API_KEY = input('bullet> ')
+            SHODAN_API_KEY = input('securoserv> ')
             api = shodan.Shodan(SHODAN_API_KEY)
             os.system('clear')
             print(colored('WHAT DO YOU WANT TO SEARCH ON SHODAN', 'red'))
-            search = input('bullet> ')
+            search = input('securoserv> ')
             try:
                 results = api.search(search)
                 print(colored('RESULTS FOUND: %s' % results['total'], 'cyan'))
@@ -256,7 +256,7 @@ while True :
                     print(result['data'])
                     print('')
                 print('PRESS {ENTER} TO GO BACK')
-                back = input('bullet> ')
+                back = input('securoserv> ')
             except shodan.APIError:
                 print('ERROR')
 
@@ -281,11 +281,11 @@ while True :
             os.system('clear')
             print(colored("ENTER EMAIL YOU WANT TO CHECK", 'red'))
             print('')
-            email = input('bullet> ')
+            email = input('securoserv> ')
             os.system('clear')
             check(email)
             print('ENTER {99} TO GO BACK')
-            nine = input('bullet> ')
+            nine = input('securoserv> ')
             if nine == '99' :
                 continue
         elif t == '6' :
@@ -312,21 +312,21 @@ while True :
         print(colored("[4] URLSnarf (Works in conjunction with ARPspoof)", 'red'))
         print(colored("[5] Dsniff (Works in conjunction with ARPspoof)", 'red'))
         print(colored("[ENTER] Go Back", 'red'))
-        f = input('bullet> ')
+        f = input('securoserv> ')
         if f == '1' :
             # ARPSPOOF
             os.system('clear')
             print(colored('ENTER CLIENTS IP: ', 'red'))
-            g = input('bullet> ')
+            g = input('securoserv> ')
             os.system('clear')
             os.system('ip r')
             print(colored("ENTER GATEWAY IP: ", 'red'))
-            h = input('bullet> ')
+            h = input('securoserv> ')
             os.system('clear')
             os.system('ifconfig')
             print(colored('{+}---------------------------------------------{+}'))
             print(colored("ENTER YOUR INTERFACE:", 'red'))
-            j = input('bullet> ')
+            j = input('securoserv> ')
             os.system('clear')
             os.system('gnome-terminal --command="arpspoof -i "' + j + '" -t "' + g + "' '" + h)
             os.system('clear')
@@ -340,13 +340,13 @@ while True :
             # SHELLPHISH
             os.system("clear")
             print(colored("DO YOU HAVE SHELLPHISH?[Y/N]", 'red'))
-            v = input('bullet> ')
+            v = input('securoserv> ')
             if v == 'Y' :
                 os.system('clear')
                 os.system('./shellphish/shellphish.sh')
             elif v == 'N' :
                 print(colored("DO YOU WANT TO INSTALL IT[Y/N]", 'red'))
-                m = input('bullet> ')
+                m = input('securoserv> ')
                 if m == 'Y' :
                     os.system('clear')
                     os.system('git clone https://github.com/thelinuxchoice/shellphish')
@@ -359,7 +359,7 @@ while True :
             os.system('ifconfig')
             print(colored("|------------------------------------------------|", 'red'))
             print("WHAT IS YOUR WIRELESS INTERFACE?")
-            z = input('bullet> ')
+            z = input('securoserv> ')
             os.system('clear')
             os.system('urlsnarf ' + z)
         elif f == '5' :
@@ -382,7 +382,7 @@ while True :
         print(colored("[4] Router Sploit", 'white'))
         print(colored("[5] The Fat Rat(BackDoor Factory)", 'white'))
         print(colored("[ENTER] Go Back", 'red'))
-        l = input("bullet>")
+        l = input("securoserv>")
         if l == '1' :
             os.system('clear')
             os.system('sudo service postgresql start')
@@ -396,7 +396,7 @@ while True :
         elif l == '4' :
             os.system("clear")
             print('DO YOU HAVE ROUTERSPLOIT?[Y/N]')
-            x = input('bullet> ')
+            x = input('securoserv> ')
             if x == 'Y' :
                 os.system('clear')
                 os.system('python3 routersploit/rsf.py')
@@ -407,7 +407,7 @@ while True :
         elif l == '5' :
             os.system('clear')
             print('DO YOU HAVE THE FAT RAT?[Y/N]')
-            a = input('bullet> ')
+            a = input('securoserv> ')
             if a == 'Y' :
                 os.system('clear')
                 os.system('./TheFatRat/fatrat')
@@ -426,7 +426,7 @@ while True :
         elif l == '5' :
             os.system('clear')
             print('DO YOU HAVE THE FAT RAT?[Y/N]')
-            a = input('bullet> ')
+            a = input('securoserv> ')
             if a == 'Y' :
                 os.system('clear')
                 os.system('./TheFatRat/fatrat')
