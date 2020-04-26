@@ -1,4 +1,4 @@
-# BULLETSCRIPT
+# SECUROSERV SCRIPT
 # CODED BY: Orangeman
 # USE AT YOUR OWN RISK
 
@@ -14,7 +14,7 @@ import shodan
 
 colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
-sho = '''
+shodan = '''
  _____ _   _ ___________  ___   _   _ 
 /  ___| | | |  _  |  _  \/ _ \ | \ | |
 \ `--.| |_| | | | | | | / /_\ \|  \| |
@@ -24,23 +24,25 @@ sho = '''
 '''
 
 
+securoserv_graphic = '''
+███████╗███████╗ ██████╗██╗   ██╗██████╗  ██████╗ ███████╗███████╗██████╗ ██╗   ██╗      ███╗
+██╔════╝██╔════╝██╔════╝██║   ██║██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔══██╗██║   ██║    ██   ██╗
+███████╗█████╗  ██║     ██║   ██║██████╔╝██║   ██║███████╗█████╗  ██████╔╝██║   ██║   ██<(o)>██╗
+╚════██║██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝  ██       ██╗
+███████║███████╗╚██████╗╚██████╔╝██║  ██║╚██████╔╝███████║███████╗██║  ██║ ╚████╔╝  █████████████╗
+╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝   ╚════════════╝
+                              ALL-IN-ONE PENETRATION TOOLKIT                                                   
+'''
+
 
 os.system('clear')
 # MAIN MENU
 while True :
     os.system('clear')
-    print(colored('         █╗    █╗        All-in one tool', colour))
-    print(colored('         █║ █╗ █║    For Penetration Testing', colour))
-    print(colored('         █║ █║ █║ ', colour))
-    print(colored('██████╗ ████████╗██╗     ██╗     ███████╗████████╗', colour))
-    print(colored('██╔══██╗██║   ██║██║     ██║     ██╔════╝╚══██╔══╝', colour))
-    print(colored('██████╔╝██    ██║██║     ██║     █████╗     ██║   ', colour))
-    print(colored('██╔══██╗████████║██║     ██║     ██╔══╝     ██║   ', colour))
-    print(colored('██████╔╝╚██████╔╝███████╗███████╗███████╗   ██║   ', colour))
-    print(colored('╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝   ╚═╝   ', colour))
+    print(colored(securoserv_graphic, colour))
     print(colored('----------| Coded by: Orangeman |----------', 'red'))
     print(colored('--------------| MAIN MENU |----------------', 'cyan'))
-    print(colored('[1] Enter AirDos (Wireless attacks)', 'red'))
+    print(colored('[1] Enter Sightseer (Wireless attacks)', 'red'))
     print(colored('[2] Password Attacks', 'red'))
     print(colored('[3] BeaverCrypt (AES-256 Bit Encryptor of files)', 'red'))
     print(colored('[4] Information Gathering', 'red'))
@@ -60,14 +62,14 @@ while True :
 
     if q == '1' :
         os.system('clear')
-        print(colored("DO YOU HAVE AIRDOS?[Y/N]", 'red'))
+        print(colored("DO YOU HAVE SIGHTSEER?[Y/N]", 'red'))
         k = input('bullet> ')
         if k == 'Y' :
-            os.system('python3 airdos/dos.py')
+            os.system('python3 Sightseer/sightseer.py')
         elif k == 'N' :
             os.system('clear')
-            os.system('git clone https://github.com/Orangeman9590/airdos')
-            os.system('python3 airdos/dos.py')
+            os.system('git clone https://github.com/Orangeman9590/Sightseer')
+            os.system('python3 Sightseer/sightseer.py')
 
     # PASSWORD
     elif q == '2' :
@@ -239,7 +241,7 @@ while True :
         elif t == '2' :
             # SHODAN
             os.system('clear')
-            print(colored(sho, 'magenta'))
+            print(colored(shoda, 'magenta'))
             print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
             SHODAN_API_KEY = input('bullet> ')
             api = shodan.Shodan(SHODAN_API_KEY)
