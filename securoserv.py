@@ -23,6 +23,15 @@ shodan = '''
 \____/\_| |_/\___/|___/ \_| |_/\_| \_/
 '''
 
+s_e_t = '''
+ _____  _____ _____ _____  ___   _       _____ _   _ _____ _____ _   _  _   _  ___________ _____ _   _ _____ 
+/  ___||  _  /  __ \_   _|/ _ \ | |     |  ___| \ | |  __ \_   _| \ | || \ | ||  ___| ___ \_   _| \ | |  __ \ 
+\ `--. | | | | /  \/ | | / /_\ \| |     | |__ |  \| | |  \/ | | |  \| ||  \| || |__ | |_/ / | | |  \| | |  \/
+ `--. \| | | | |     | | |  _  || |     |  __|| . ` | | __  | | | . ` || . ` ||  __||    /  | | | . ` | | __ 
+/\__/ /\ \_/ / \__/\_| |_| | | || |____ | |___| |\  | |_\ \_| |_| |\  || |\  || |___| |\ \ _| |_| |\  | |_\ \ 
+\____/  \___/ \____/\___/\_| |_/\_____/ \____/\_| \_/\____/\___/\_| \_/\_| \_/\____/\_| \_|\___/\_| \_/\____
+'''
+
 
 securoserv_graphic = '''
 ███████╗███████╗ ██████╗██╗   ██╗██████╗  ██████╗ ███████╗███████╗██████╗ ██╗   ██╗      ███╗
@@ -31,7 +40,7 @@ securoserv_graphic = '''
 ╚════██║██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝  ██       ██╗
 ███████║███████╗╚██████╗╚██████╔╝██║  ██║╚██████╔╝███████║███████╗██║  ██║ ╚████╔╝  █████████████╗
 ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝   ╚════════════╝
-                              ALL-IN-ONE PENETRATION TOOLKIT                                                   
+                            ALL-IN-ONE PENETRATION TOOLKIT                                                
 '''
 
 
@@ -39,7 +48,6 @@ os.system('clear')
 # MAIN MENU
 while True :
     os.system('clear')
-    print(colored(securoserv_graphic, colour))
     print(colored('----------| Coded by: Orangeman |----------', 'red'))
     print(colored('--------------| MAIN MENU |----------------', 'cyan'))
     print(colored('[1] Enter Sightseer (Wireless attacks)', 'red'))
@@ -48,6 +56,7 @@ while True :
     print(colored('[4] Information Gathering', 'red'))
     print(colored("[5] Sniffing and Spoofing", 'red'))
     print(colored('[6] Exploitation', 'red'))
+    print(colored('[7] Social-Engineering', 'red'))
     print(colored("[99] Quit Script", 'red'))
     print('')
 
@@ -143,7 +152,7 @@ while True :
             print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
             print(" ")
             print(colored('PRESS {99} TO GO BACK'))
-            input = input('bullet> ')
+            input = input('securoserv> ')
             if input == '99' :
                 continue
         elif w == '3' :
@@ -243,7 +252,7 @@ while True :
             os.system('clear')
             print(colored(shoda, 'magenta'))
             print(colored('PLEASE ENTER IN YOUR SHODAN API KEY', 'red'))
-            SHODAN_API_KEY = input('securoserv> ')
+            SHODAN_API_KEY = input('bullet> ')
             api = shodan.Shodan(SHODAN_API_KEY)
             os.system('clear')
             print(colored('WHAT DO YOU WANT TO SEARCH ON SHODAN', 'red'))
@@ -382,7 +391,7 @@ while True :
         print(colored("[4] Router Sploit", 'white'))
         print(colored("[5] The Fat Rat(BackDoor Factory)", 'white'))
         print(colored("[ENTER] Go Back", 'red'))
-        l = input("securoserv>")
+        l = input("securoserv> ")
         if l == '1' :
             os.system('clear')
             os.system('sudo service postgresql start')
@@ -415,7 +424,7 @@ while True :
                 os.system('clear')
                 os.system('git clone https://github.com/Screetsec/TheFatRat')
                 os.system('./TheFatRat/fatrat')
-            x = input('bullet> ')
+            x = input('securoserv> ')
             if x == 'Y' :
                 os.system('clear')
                 os.system('python3 routersploit/rsf.py')
@@ -434,3 +443,33 @@ while True :
                 os.system('clear')
                 os.system('git clone https://github.com/Screetsec/TheFatRat')
                 os.system('./TheFatRat/fatrat')
+    elif q == '7':
+        print(colored(s_e_t, 'cyan'))
+        print('{+}=========================================================================================={+}')
+        print(colored('[1]=Headhunter (E-mail Bomber)', 'cyan'))
+        print(colored('[2]=Spider (E-mail Scraper)', 'cyan'))
+        print(colored('[3]=Social Engineering Toolkit', 'cyan'))
+        print('')
+        social = input('securoerv> ')
+        
+        if social == '1':
+            os.system('clear')
+            print(colored('DO YOU HAVE HEADHUNTER[y/n]', 'red'))
+            y = input('sescuroserv> ')
+            if y == 'y':
+                os.system('python3 Headhunter/headhunter.py')
+            elif y == 'n':
+                os.system('git clone https://github.com/Orangeman9590/Headhunter')
+                os.system('python3 Headhunter/headhunter.py')
+        elif social == '2':
+            os.system('clear')
+            print(colored('DO YOU HAVE SPIDER[y/n]', 'red'))
+            n = input('sescuroserv> ')
+            if n == 'y' :
+                os.system('python3 Spider/spider.py')
+            elif n == 'n' :
+                os.system('git clone https://github.com/Orangeman9590/Spider')
+                os.system('python3 Spider/spider.py')
+        elif social == '3':
+            os.system('clear')
+            os.system('sudo setoolkit')
