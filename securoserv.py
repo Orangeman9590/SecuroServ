@@ -11,6 +11,8 @@ import string
 import random
 import re
 import shodan
+import sys
+import pygeoip
 
 colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 colour = random.choice(colours)
@@ -24,12 +26,12 @@ shodan = '''
 '''
 
 s_e_t = '''
- _____  _____ _____ _____  ___   _       _____ _   _ _____ _____ _   _  _____ ___________ _____ _   _ _____
-/  ___||  _  /  __ \_   _|/ _ \ | |     |  ___| \ | |  __ \_   _| \ | ||  ___|  ___| ___ \_   _| \ | |  __ \
-\ `--. | | | | /  \/ | | / /_\ \| |     | |__ |  \| | |  \/ | | |  \| || |__ | |__ | |_/ / | | |  \| | |  \/
- `--. \| | | | |     | | |  _  || |     |  __|| . ` | | __  | | | . ` ||  __||  __||    /  | | | . ` | | __ 
-/\__/ /\ \_/ / \__/\_| |_| | | || |____ | |___| |\  | |_\ \_| |_| |\  || |___| |___| |\ \ _| |_| |\  | |_\ \
-\____/  \___/ \____/\___/\_| |_/\_____/ \____/\_| \_/\____/\___/\_| \_/\____/\____/\_| \_|\___/\_| \_/\____/
+ _____  _____ _____ _____  ___   _       _____ _   _ _____ _____ _   _  _   _  ___________ _____ _   _ _____ 
+/  ___||  _  /  __ \_   _|/ _ \ | |     |  ___| \ | |  __ \_   _| \ | || \ | ||  ___| ___ \_   _| \ | |  __ \ 
+\ `--. | | | | /  \/ | | / /_\ \| |     | |__ |  \| | |  \/ | | |  \| ||  \| || |__ | |_/ / | | |  \| | |  \/
+ `--. \| | | | |     | | |  _  || |     |  __|| . ` | | __  | | | . ` || . ` ||  __||    /  | | | . ` | | __ 
+/\__/ /\ \_/ / \__/\_| |_| | | || |____ | |___| |\  | |_\ \_| |_| |\  || |\  || |___| |\ \ _| |_| |\  | |_\ \ 
+\____/  \___/ \____/\___/\_| |_/\_____/ \____/\_| \_/\____/\___/\_| \_/\_| \_/\____/\_| \_|\___/\_| \_/\____
 '''
 
 
@@ -48,7 +50,6 @@ os.system('clear')
 # MAIN MENU
 while True :
     os.system('clear')
-    print(colored(securoserv_graphic, colour))
     print(colored('----------| Coded by: Orangeman |----------', 'red'))
     print(colored('--------------| MAIN MENU |----------------', 'cyan'))
     print(colored('[1] Enter Sightseer (Wireless attacks)', 'red'))
@@ -189,6 +190,7 @@ while True :
         print(colored("[4] Autopsy", 'magenta'))
         print(colored("[5] Validate E-mail", 'magenta'))
         print(colored("[6] Netdiscover", 'magenta'))
+        print(colored('[7] Reaper (IP to Geo)', 'magenta'))
         print(colored("[ENTER] Go Back", 'magenta'))
 
         t = input("securoserv> ")
@@ -301,6 +303,34 @@ while True :
         elif t == '6' :
             os.system('clear')
             os.system('netdiscover')
+        elif t == '7':
+            reaper_graphic = '''
+            ██████╗ ███████╗ █████╗ ██████╗ ███████╗██████╗ 
+            ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+            ██████╔╝█████╗  ███████║██████╔╝█████╗  ██████╔╝
+            ██╔══██╗██╔══╝  ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗
+            ██║  ██║███████╗██║  ██║██║     ███████╗██║  ██║
+            ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝
+            '''
+
+            while True :
+                os.system('clear')
+                print(colored(reaper_graphic, 'red'))
+                print(colored('{?}======={ DEVELOPED BY: ORANGEMAN }========{?}', 'cyan'))
+                print(colored('ENTER IN THE IP YOU WANT TO LOCATE'))
+                ip = input('reaper> ')
+
+                gip = pygeoip.GeoIP('GeoLiteCity.dat')
+                try :
+                    res = gip.record_by_addr(ip)
+                    for key, val in res.items() :
+                        print(colored('%s : %s' % (key, val), 'red'))
+                    sys.exit(1)
+                except Exception as e :
+                    print(f'ERROR: {e}')
+                    print('CHECK IP VALIDITY')
+                    time.sleep(3)
+                    continue
 
 
 
@@ -445,18 +475,14 @@ while True :
                 os.system('git clone https://github.com/Screetsec/TheFatRat')
                 os.system('./TheFatRat/fatrat')
     elif q == '7':
-        os.system('clear')
         print(colored(s_e_t, 'cyan'))
         print('{+}=========================================================================================={+}')
         print(colored('[1]=Headhunter (E-mail Bomber)', 'cyan'))
         print(colored('[2]=Spider (E-mail Scraper)', 'cyan'))
         print(colored('[3]=Social Engineering Toolkit', 'cyan'))
-        print(colored('[99]=GO BACK', 'cyan'))
         print('')
         social = input('securoerv> ')
-        
-        if social == '99':
-            continue
+
         if social == '1':
             os.system('clear')
             print(colored('DO YOU HAVE HEADHUNTER[y/n]', 'red'))
