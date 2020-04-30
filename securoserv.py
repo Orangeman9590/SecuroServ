@@ -46,10 +46,11 @@ securoserv_graphic = '''
 '''
 
 
-os.system('clear')
+
 # MAIN MENU
 while True :
     os.system('clear')
+    print(colored(securoserv_graphic, colour))
     print(colored('----------| Coded by: Orangeman |----------', 'red'))
     print(colored('--------------| MAIN MENU |----------------', 'cyan'))
     print(colored('[1] Enter Sightseer (Wireless attacks)', 'red'))
@@ -475,13 +476,14 @@ while True :
                 os.system('git clone https://github.com/Screetsec/TheFatRat')
                 os.system('./TheFatRat/fatrat')
     elif q == '7':
+        os.system('clear')
         print(colored(s_e_t, 'cyan'))
         print('{+}=========================================================================================={+}')
         print(colored('[1]=Headhunter (E-mail Bomber)', 'cyan'))
         print(colored('[2]=Spider (E-mail Scraper)', 'cyan'))
         print(colored('[3]=Social Engineering Toolkit', 'cyan'))
         print('')
-        social = input('securoerv> ')
+        social = input('securoserv> ')
 
         if social == '1':
             os.system('clear')
