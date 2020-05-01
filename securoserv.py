@@ -14,6 +14,7 @@ import shodan
 import sys
 import pygeoip
 import folium
+import webbrowser
 
 
 colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
